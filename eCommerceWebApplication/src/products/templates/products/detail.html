@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class ='text-center'>
+		<p>{{ title }}</p>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>{{ object.title }}</h1>
+			<p>{{ object.timestamp|timesince }} ago</p>
+			<h2>{{ object.description|linebreaks }}</h2>
+			<h3>Price :{{ object.price }}</h3>
+			<!-- {% if object.image2 %}
+				<img src="{{ object.image.url }}" class="img-fluid"/>
+				<img src="{{ object.image2.url }}" class="img-fluid"/>
+			{% endif %} -->
+				<img src="{{ object.image.url }}" class="img-fluid"/>
+				<img src="{{ object.image2.url }}" class="img-fluid"/>
+			<p>Available : Yes</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
